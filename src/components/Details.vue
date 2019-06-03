@@ -19,44 +19,59 @@
 </template>
 
 <script>
-  export default {
-    name: "Details",
-    props: ["music"],
+export default {
+  name: "Details",
+  props: ["music"],
 
-    data() {
-      return {};
-    },
-    computed: {},
-    methods: {},
-    watch: {
-      music: {
-        handler: (val, oldVal) => {
-          document.getElementsByTagName("audio")[0].load();
-        }
+  data() {
+    return {};
+  },
+  computed: {},
+  methods: {},
+  watch: {
+    music: {
+      handler: (val, oldVal) => {
+        document.getElementsByTagName("audio")[0].load();
       }
     }
-  };
+  }
+};
 </script>
 
 <style>
-  h1 {
-    font-size: 25px;
-    color: white;
-  }
+audio {
+  width: 100%;
+}
+h1 {
+  font-size: 25px;
+  color: white;
+  font-weight: 700;
+}
 
-  h2 {
-    font-size: 15px;
-    font-style: italic;
-  }
+h2 {
+  font-weight: 700;
+  font-size: 15px;
+  font-style: italic;
+  color: white;
+}
 
-  h3 {
-    font-size: 12px;
-    font-style: oblique;
-  }
+h3 {
+  font-weight: 700;
+  font-size: 12px;
+  font-style: oblique;
+  color: white;
+}
 
-  .image-stuff {
-    z-index: 12;
-    max-height: 200px;
-    max-width: 200px;
-  }
+.image-stuff {
+  z-index: 12;
+  max-height: 200px;
+  max-width: 200px;
+}
+.card-stuff {
+  padding-top: 20px;
+  background-color: rgb(83, 83, 83);
+}
+.details {
+  margin-top: 20px;
+}
 </style>
